@@ -62,7 +62,7 @@
     }
     .profile-main h1 {
       color: var(--kelvin-blue);
-      font-size: 2.05rem;
+      font-size: 1.80rem;
       font-weight: bold;
       margin-top: 0.13em;
       margin-bottom: 0.07em;
@@ -94,7 +94,7 @@
     }
     h2 {
       color: var(--kelvin-blue);
-      font-size: 1.73rem;
+      font-size: 1.70rem;
       font-weight: bold;
       margin-top: 1px;
       margin-bottom: 4px;
@@ -130,14 +130,42 @@
     }
     /* Responsive tweaks for mobile/tablet */
     @media (max-width: 600px) {
-      .container { width: 99vw; padding: 0; }
-      .card { padding: 0.5rem 0.4rem; }
-      .profile-header { flex-direction: column; gap: 0.4rem; }
-      .profile-header img { width: 36vw; max-width: 90px; min-width: 50px; margin-bottom: 0.22em;}
-      .profile-main { min-width: unset; }
-      ul { font-size: 1.17rem; }
+    body {
+      font-size: 1.1rem;
     }
-  </style>
+
+    .container {
+      width: 96vw;
+      padding: 0;
+    }
+
+    .card {
+      padding: 0.65rem 0.7rem;
+    }
+
+    .profile-header {
+      flex-direction: row-reverse;      /* ← Keep image on the right */
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    .profile-header img {
+      width: 26vw;                      /* ← Adjust image size for mobile */
+      max-width: 90px;
+      min-width: 60px;
+      margin-bottom: 0;
+    }
+
+    .profile-main {
+      min-width: 0;
+      flex: 1;
+    }
+
+    ul {
+      font-size: 0.97rem;
+    }
+  }
+</style>
 </head>
 <body>
   <div class="container">
@@ -148,48 +176,35 @@
           <h1>Sasha Cui</h1>
           <p>
             <a href="https://statistics.yale.edu/" target="_blank" rel="noopener noreferrer">
-              Department of Statistics and Data Science
+              Department of Statistics & Data Science
             </a><br>
             <a href="https://www.yale.edu/" target="_blank" rel="noopener noreferrer">
               Yale University
             </a>
-          </p>
-          <address>
-            Kline Tower, Room 1037<br>
-            219 Prospect St<br>
-            New Haven, CT 06511<br>
-            <span>e-mail: sasha dot cui at yale dot edu</span>
-          </address>
+          </p><br>
+
           <p>My research focuses on Large Language Models and Artificial Intelligence.</p>
-          <p class="keywords">Keywords: Activation Steering, Benchmarking</p>
+          <p class="keywords">Keywords: Activation Steering, Measurements and Benchmarks</p><br>
           <p>
             A.B. Mathematics, 2023,
             <a href="https://www.uchicago.edu/" target="_blank" rel="noopener noreferrer">
               University of Chicago
             </a>
-          </p>
+          </p><br>
+          <address>
+            e mail: sasha dot cui at yale dot edu<br><br>
+            Kline Tower, Room 1037<br>
+            219 Prospect St<br>
+            New Haven, CT 06511
+          </address>
         </div>
       </div>
     </section>
 
-    <section class="card">
-      <h2>Teaching</h2>
-      A list of courses for which I served as the Teaching Assistant follows.
-      <ul>
-        <li>SDS540: Probability, Spring 2025</li>
-        <li>SDS542: Theory of Statistics, Fall 2024</li>
-        <li>MATH112: Calculus of Functions of One Variable, Fall 2023</li>
-        <li>MATH240: Introduction to Applied Math, Spring 2021</li>
-        <li>MATH501: Abstract Algebra, Fall 2020</li>
-      </ul>
-    </section>
 
     <section class="card">
       <h2>Call for Collaborators</h2>
-        I'm looking for collaborators who are motivated to tackle practically meaningful AI problems, truly understand <em>The Bitter Lesson</em>, and want to shape the future of AI (rather than to write for a specific academic audience).
-      <p>
-        I'm also seeking domain experts for the following projects:
-      </p>
+        I'm looking for collaborators who are motivated to tackle practically meaningful AI problems, truly understand <em>The Bitter Lesson</em>, and want to shape the future of AI (rather than to write only for a narrow audience).  Furthermore, I'm also seeking domain experts for the following projects:
       <ul>
         <li>
           <a href="assets/pdf/01_LanguageAcquisition.pdf" target="_blank" rel="noopener noreferrer">
@@ -203,6 +218,18 @@
         </li>
       </ul>
       <p>Please reach out if you're interested.</p>
+    </section>
+
+    <section class="card">
+      <h2>Teaching</h2>
+      <!-- A list of courses for which I served as the Teaching Assistant follows. -->
+      <ul>
+        <li>SDS540: Probability, Spring 2025</li>
+        <li>SDS542: Theory of Statistics, Fall 2024</li>
+        <li>MATH112: Calculus of Functions of One Variable, Fall 2023</li>
+        <li>MATH240: Introduction to Applied Math, Spring 2021</li>
+        <li>MATH501: Abstract Algebra, Fall 2020</li>
+      </ul>
     </section>
   </div>
 </body>
