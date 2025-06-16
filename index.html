@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Sasha Cui</title>
@@ -11,38 +12,48 @@
       --kelvin-blue-light: #e7f0fa;
       --shadow: 0 2px 12px #bfd9f2;
     }
+
     body {
       /* background: var(--kelvin-blue-light); */
       font-family: 'Times New Roman', Times, serif;
       font-size: 1.09rem;
-      line-height: 1.22;   /* Tight line spacing */
+      line-height: 1.22;
+      /* Tight line spacing */
       color: #000;
       margin: 0;
       padding: 0;
     }
+
     .container {
       width: min(75vw, 1500px);
-      margin: 12px auto 0 auto;   /* Even less top margin */
+      margin: 12px auto 0 auto;
+      /* Even less top margin */
       box-sizing: border-box;
     }
+
     .card {
       background: #fff;
       border-radius: 10px;
       box-shadow: var(--shadow);
-      padding: 0.85rem 1.2rem 0.95rem 1.2rem; /* less vertical/horizontal padding */
-      margin-bottom: 11px; /* less gap */
+      padding: 0.85rem 1.2rem 0.95rem 1.2rem;
+      /* less vertical/horizontal padding */
+      margin-bottom: 11px;
+      /* less gap */
       width: 100%;
       box-sizing: border-box;
       text-align: left;
     }
+
     .profile-header {
       flex-direction: row-reverse;
       display: flex;
       align-items: flex-start;
-      gap: 0.75rem;  /* less gap */
+      gap: 0.75rem;
+      /* less gap */
       margin-bottom: 0.3rem;
       flex-wrap: wrap;
     }
+
     .profile-header img {
       display: block;
       max-width: 200px;
@@ -56,10 +67,12 @@
       background: #fff;
       flex-shrink: 0;
     }
+
     .profile-main {
       flex: 1 1 140px;
       min-width: 115px;
     }
+
     .profile-main h1 {
       color: var(--kelvin-blue);
       font-size: 1.80rem;
@@ -68,13 +81,16 @@
       margin-bottom: 0.07em;
       letter-spacing: 0.4px;
       font-family: inherit;
-      line-height: 1.04;  /* Tighter */
+      line-height: 1.04;
+      /* Tighter */
     }
+
     .profile-main p {
       margin: 0.17em 0;
       font-size: 1em;
       line-height: 1.22;
     }
+
     .profile-main .keywords {
       color: var(--kelvin-blue);
       font-size: 1em;
@@ -84,6 +100,7 @@
       margin-top: 0.06em;
       line-height: 1.22;
     }
+
     address {
       font-style: normal;
       color: #000;
@@ -92,6 +109,7 @@
       font-size: 1em;
       line-height: 1.22;
     }
+
     h2 {
       color: var(--kelvin-blue);
       font-size: 1.70rem;
@@ -104,6 +122,7 @@
       font-family: inherit;
       line-height: 1.13;
     }
+
     ul {
       font-size: 1em;
       margin-top: 3px;
@@ -111,11 +130,13 @@
       padding-left: 1.04em;
       line-height: 1.18;
     }
+
     li {
       margin-bottom: 2.7px;
       white-space: normal;
       line-height: 1.18;
     }
+
     a {
       color: var(--kelvin-blue);
       text-decoration: none;
@@ -123,11 +144,13 @@
       border-bottom: 1px dotted var(--kelvin-blue);
       transition: color 0.13s;
     }
+
     a:hover {
       color: #1c52a2;
       border-bottom: 1px solid var(--kelvin-blue);
       background: #f3f8fe;
     }
+
     /* Responsive tweaks for mobile/tablet */
     @media (max-width: 600px) {
       body {
@@ -136,7 +159,8 @@
 
       .container {
         width: 100%;
-        padding: 0 1rem; /* adds margin inside screen edge */
+        padding: 0 1rem;
+        /* adds margin inside screen edge */
         box-sizing: border-box;
       }
 
@@ -164,9 +188,9 @@
         width: 100%;
       }
     }
-
-</style>
+  </style>
 </head>
+
 <body>
   <div class="container">
     <section class="card">
@@ -176,23 +200,24 @@
           <h1>Sasha Cui</h1>
           <p>
             <a href="https://statistics.yale.edu/" target="_blank" rel="noopener noreferrer">
-              Department of Statistics & Data Science
-            </a><br>
+              Department of Statistics & Data Science,
+            </a>
             <a href="https://www.yale.edu/" target="_blank" rel="noopener noreferrer">
               Yale University
             </a>
           </p><br>
 
-          <p>I'm interested in Large Language Models and Artificial Intelligence.</p>
-          <p class="keywords">Keywords: Unsupervised Activation Steering, Adversarial Benchmarks</p><br>
+          <p>I'm interested in Large Language Models and Artificial Intelligence.</p><br>
+          <p class="keywords">Keywords: Alignment, Mechanistic Intepretability, Unsupervised Activation Steering,
+            Multi-Agent Benchmarking, Robust Evaluation</p><br>
           <p>
             A.B. Mathematics, 2023,
-            <a href="https://www.uchicago.edu/" target="_blank" rel="noopener noreferrer">
+            <a href="https://mathematics.uchicago.edu/people/#professors" target="_blank" rel="noopener noreferrer">
               University of Chicago
             </a>
           </p><br>
           <address>
-            mail: sasha dot cui at yale dot edu<br><br>
+            Mail: sasha dot cui at yale dot edu<br><br>
             Kline Tower, Room 1037<br>
             219 Prospect St<br>
             New Haven, CT 06511
@@ -204,7 +229,8 @@
 
     <section class="card">
       <h2>Call for Collaborators</h2>
-        I'm looking for collaborators who understand <em>The Bitter Lesson</em>, want to tackle practically meaningful AI problems, and aim to shape the future of AI (rather than to write only for a narrow audience).  Besides, I'm also seeking domain experts for
+      I'm looking for collaborators who appreciate <em>The Bitter Lesson</em>, have good tastes, and aim to tackle AI
+      research problems with the potential to shape the world. I'm also seeking domain experts for
       <ul>
         <li>
           <a href="assets/pdf/01_LanguageAcquisition.pdf" target="_blank" rel="noopener noreferrer">
@@ -217,7 +243,8 @@
           </a>
         </li>
       </ul>
-      <p>Please reach out if you're interested.</p>
+      <p>I welcome people from all backgrounds—undergraduate students, graduate students, or professionals. Please reach
+        out if you're interested.</p>
     </section>
 
     <section class="card">
@@ -233,4 +260,5 @@
     </section>
   </div>
 </body>
+
 </html>
