@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Becoming a Full-Stack AI Researcher</title>
+  <meta name="description" content="Biweekly working group with Builder & Explorer tracks covering LLM training, post-training, serving, agents, evaluation, infra, interpretability, and safety. Supported by WTI GPUs." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <!-- Header -->
+  <header class="bg-white/70 backdrop-blur border-b border-slate-200 sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="font-semibold text-lg">Full-Stack AI Researcher</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#tracks" class="hover:underline">Tracks</a>
+        <a href="#syllabus" class="hover:underline">Syllabus</a>
+        <a href="#schedule" class="hover:underline">Schedule</a>
+        <a href="#resources" class="hover:underline">Resources</a>
+        <a href="#join" class="hover:underline">Join</a>
+      </nav>
+      <a href="{{SURVEY_LINK}}" class="inline-block rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium hover:bg-slate-100">Sign up</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-white to-slate-100">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight">Becoming a <span class="text-slate-700">Full-Stack AI Researcher</span></h1>
+        <p class="mt-4 text-slate-700 text-lg">
+          A biweekly, hands-on working group covering the LLM stack end-to-end: training, post-training, serving, agents, evaluation, data, infra, interpretability, and safety — with dedicated GPUs via <span class="font-semibold">WTI</span>.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="{{SURVEY_LINK}}" class="rounded-xl bg-slate-900 text-white px-5 py-3 text-sm font-semibold hover:bg-slate-800">Fill the interest form</a>
+          <a href="{{GITHUB_REPO}}" class="rounded-xl border border-slate-300 px-5 py-3 text-sm font-medium hover:bg-slate-100">GitHub repo</a>
+          <a href="{{OVERLEAF_SYLLABUS_URL}}" class="rounded-xl border border-slate-300 px-5 py-3 text-sm font-medium hover:bg-slate-100">Draft syllabus</a>
+        </div>
+        <p class="mt-3 text-sm text-slate-600">Next: organizational meeting on <strong>{{NEXT_MEETING_DATE}}</strong> @ <strong>{{NEXT_MEETING_LOCATION}}</strong>.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h3 class="text-base font-semibold">What you’ll touch</h3>
+        <ul class="mt-3 grid grid-cols-2 gap-2 text-sm">
+          <li class="border rounded-xl px-3 py-2">Megatron-LM / DeepSpeed</li>
+          <li class="border rounded-xl px-3 py-2">PEFT (LoRA) / TRL</li>
+          <li class="border rounded-xl px-3 py-2">vLLM / TGI</li>
+          <li class="border rounded-xl px-3 py-2">LangGraph / AutoGen</li>
+          <li class="border rounded-xl px-3 py-2">lm-eval-harness</li>
+          <li class="border rounded-xl px-3 py-2">HF Datasets</li>
+          <li class="border rounded-xl px-3 py-2">Slurm / Ray / Docker</li>
+          <li class="border rounded-xl px-3 py-2">TransformerLens / SAEs</li>
+        </ul>
+        <p class="mt-3 text-xs text-slate-600">Plus safety/guardrails, data pipelines, and practical infra.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto px-4 py-14">
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-2xl font-bold">About the working group</h2>
+        <p class="mt-3 text-slate-700">
+          We go beyond theory with **minimal working examples (MWEs)** and short **showcases** that demonstrate “the art of the possible” — customizations, applied demos, and advanced usage patterns. Outputs live in a public GitHub repo and a course-style website.
+        </p>
+        <p class="mt-3 text-slate-700">
+          Supported by **WTI GPUs**. Open to CS, ECE, S&DS PhD students and interested undergraduates.
+        </p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h3 class="text-base font-semibold">Cadence & outputs</h3>
+        <ul class="mt-3 list-disc pl-5 text-slate-700">
+          <li>Biweekly meetings (short talks, live demos).</li>
+          <li>Onboarding tutorial(s) for newcomers to LLMs.</li>
+          <li>Shared **GitHub** with MWEs, slides, and notes.</li>
+          <li>**Builder Track** contributors listed as co-authors on the write-up/paper.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tracks -->
+  <section id="tracks" class="bg-white border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8">
+      <div class="rounded-2xl border p-6">
+        <h3 class="text-xl font-bold">Builder Track (core)</h3>
+        <p class="mt-2 text-slate-700">Contribute MWEs, tutorials, and a brief “beyond-basics” showcase. Present at least once. PRs to the repo. Expected ~2–4 hrs per two weeks.</p>
+        <ul class="mt-3 text-sm list-disc pl-5 text-slate-700">
+          <li>Hands-on with real packages</li>
+          <li>Short demo talk(s)</li>
+          <li>PRs/docs to GitHub</li>
+          <li>Co-authorship on group write-up</li>
+        </ul>
+        <a class="inline-block mt-4 rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold hover:bg-slate-800" href="{{SURVEY_LINK}}">Apply to Builder Track</a>
+      </div>
+      <div class="rounded-2xl border p-6">
+        <h3 class="text-xl font-bold">Explorer Track (non-core)</h3>
+        <p class="mt-2 text-slate-700">Attend, learn, and run stacks locally/HPC. Great for interview prep and practical fluency.</p>
+        <ul class="mt-3 text-sm list-disc pl-5 text-slate-700">
+          <li>Biweekly sessions</li>
+          <li>Run MWEs yourself</li>
+          <li>Industry-oriented skills</li>
+          <li>Optional lightning talks</li>
+        </ul>
+        <a class="inline-block mt-4 rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium hover:bg-slate-100" href="{{SURVEY_LINK}}">Join as Explorer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Syllabus -->
+  <section id="syllabus" class="max-w-6xl mx-auto px-4 py-14">
+    <h2 class="text-2xl font-bold">Syllabus & roadmap</h2>
+    <p class="mt-2 text-slate-700">The syllabus is a **menu of packages**. Builders pick topics they care about; we’ll cover both fundamentals and customized demos.</p>
+    <div class="mt-6 grid md:grid-cols-3 gap-4">
+      <div class="bg-white rounded-2xl shadow p-5">
+        <h4 class="font-semibold">Training & Post-training</h4>
+        <p class="mt-2 text-sm text-slate-700">Megatron-LM, DeepSpeed, ColossalAI, TRL (DPO/ORPO), PEFT/LoRA.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-5">
+        <h4 class="font-semibold">Serving & Agents</h4>
+        <p class="mt-2 text-sm text-slate-700">vLLM, TGI, TensorRT-LLM; LangGraph, AutoGen, LlamaIndex.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-5">
+        <h4 class="font-semibold">Eval, Data & Infra</h4>
+        <p class="mt-2 text-sm text-slate-700">lm-eval-harness, RAG evals; HF Datasets; Slurm, Ray, Docker/Apptainer.</p>
+      </div>
+    </div>
+    <a href="{{OVERLEAF_SYLLABUS_URL}}" class="inline-block mt-6 rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium hover:bg-slate-100">View draft syllabus</a>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule" class="bg-white border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <h2 class="text-2xl font-bold">Schedule</h2>
+      <p class="mt-2 text-slate-700">Meets every two weeks. Final times will be set from the interest form.</p>
+      <div class="mt-6 grid md:grid-cols-3 gap-4 text-sm">
+        <div class="rounded-2xl border p-4">
+          <p class="font-semibold">Kickoff (Org meeting)</p>
+          <p class="text-slate-700 mt-1">{{NEXT_MEETING_DATE}} — {{NEXT_MEETING_LOCATION}}</p>
+        </div>
+        <div class="rounded-2xl border p-4">
+          <p class="font-semibold">Session 1</p>
+          <p class="text-slate-700 mt-1">Onboarding + first MWEs</p>
+        </div>
+        <div class="rounded-2xl border p-4">
+          <p class="font-semibold">Session 2</p>
+          <p class="text-slate-700 mt-1">Showcases + advanced tips</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section id="resources" class="max-w-6xl mx-auto px-4 py-14">
+    <h2 class="text-2xl font-bold">Resources</h2>
+    <ul class="mt-4 grid md:grid-cols-3 gap-4 text-sm">
+      <li class="rounded-2xl border p-4">
+        <p class="font-semibold">GitHub repository</p>
+        <a class="text-slate-700 underline break-all" href="{{GITHUB_REPO}}">{{GITHUB_REPO}}</a>
+      </li>
+      <li class="rounded-2xl border p-4">
+        <p class="font-semibold">Draft syllabus (Overleaf)</p>
+        <a class="text-slate-700 underline break-all" href="{{OVERLEAF_SYLLABUS_URL}}">{{OVERLEAF_SYLLABUS_URL}}</a>
+      </li>
+      <li class="rounded-2xl border p-4">
+        <p class="font-semibold">Sign-up form</p>
+        <a class="text-slate-700 underline break-all" href="{{SURVEY_LINK}}">{{SURVEY_LINK}}</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Join -->
+  <section id="join" class="bg-slate-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl font-bold">Ready to join?</h2>
+        <p class="mt-2 text-slate-200">Tell us your interests and availability. Builders can propose a showcase idea; Explorers can note topics they’re most eager to run.</p>
+        <a href="{{SURVEY_LINK}}" class="inline-block mt-5 rounded-xl bg-white text-slate-900 px-5 py-3 text-sm font-semibold hover:bg-slate-200">Fill the interest form</a>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-5">
+        <p class="text-sm">Contact: <a class="underline" href="mailto:sasha.cui@yale.edu">sasha.cui@yale.edu</a></p>
+        <p class="text-sm mt-2">Supported by WTI (Wuzhan Institute) with dedicated GPUs.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-xs text-slate-500 py-6">
+    © <span id="y"></span> Full-Stack AI Researcher WG • Yale. All rights reserved.
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
