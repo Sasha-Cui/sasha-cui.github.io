@@ -31,7 +31,7 @@
       <nav class="hidden md:flex gap-6 text-sm">
         <a href="#about" class="hover:underline">About</a>
         <a href="#tracks" class="hover:underline">Tracks</a>
-        <a href="#syllabus" class="hover:underline">Syllabus</a>
+        <!-- <a href="#syllabus" class="hover:underline">Syllabus</a> -->
         <a href="#schedule" class="hover:underline">Schedule</a>
         <!-- <a href="#resources" class="hover:underline">Resources</a> -->
         <!-- <a href="#join" class="hover:underline">Join</a> -->
@@ -51,9 +51,13 @@
         <div class="mt-6 flex flex-wrap gap-3">
           <!-- <a href="https://forms.gle/KHxyGa1YQwRnNnax6" class="rounded-xl bg-brand text-white px-5 py-3 text-sm font-semibold hover:bg-brand-600">Fill the Interest Form</a> -->
           <a href="https://www.overleaf.com/read/gyhqzfdtqmsx#5bdd8a" class="rounded-xl border border-brand px-5 py-3 text-sm font-medium text-brand hover:bg-brand-100">Syllabus</a>
-          <a href="#" class="rounded-xl border border-brand px-5 py-3 text-sm font-medium text-brand hover:bg-brand-100">GitHub Repo (Coming Soon)</a>
+          <a href="https://github.com/Sasha-Cui/full-stack-ai" class="rounded-xl border border-brand px-5 py-3 text-sm font-medium text-brand hover:bg-brand-100">GitHub Repo</a>
+          <a href="https://www.overleaf.com/read/gyhqzfdtqmsx#5bdd8a"
+             class="rounded-xl border border-brand px-5 py-3 text-sm font-medium text-brand hover:bg-brand-100">
+            Syllabus
+          </a>
         </div>
-        <p class="mt-3 text-sm text-slate-600">Upcoming: organisational meeting in the week of 14 Sept 2025.</p>
+        <!-- <p class="mt-3 text-sm text-slate-600">Upcoming: organisational meeting in the week of 14 Sept 2025.</p> -->
       </div>
 
       <div class="bg-white rounded-2xl shadow p-6">
@@ -96,14 +100,14 @@
   </section>
 
   <!-- Syllabus -->
-  <section id="syllabus" class="max-w-6xl mx-auto px-4 py-14">
+  <!-- <section id="syllabus" class="max-w-6xl mx-auto px-4 py-14">
     <h2 class="text-2xl font-bold text-brand">Syllabus</h2>
 
     <a href="https://www.overleaf.com/read/gyhqzfdtqmsx#5bdd8a"
        class="inline-block mt-6 rounded-xl border border-brand px-4 py-2 text-sm font-medium text-brand hover:bg-brand-100">
       View syllabus
-    </a>
-    <div class="mt-6 grid md:grid-cols-3 gap-4">
+    </a> -->
+    <!-- <div class="mt-6 grid md:grid-cols-3 gap-4">
       <div class="bg-white rounded-2xl shadow p-5">
         <h4 class="font-semibold text-brand">Serving</h4>
         <p class="mt-2 text-sm text-slate-700">
@@ -146,31 +150,83 @@
           Slurm, Docker/Apptainer, Weights &amp; Biases.
         </p>
       </div>
-    </div>
+    </div> -->
+  <!-- </section> -->
 
-  </section>
 
   <!-- Schedule -->
-  <section id="schedule" class="bg-white border-y border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 py-14">
-      <h2 class="text-2xl font-bold text-brand">Schedule</h2>
-      <p class="mt-2 text-slate-700">Meets every two weeks. Final times will be set from the interest form.</p>
-      <div class="mt-6 grid md:grid-cols-3 gap-4 text-sm">
-        <div class="rounded-2xl border p-4">
-          <p class="font-semibold text-brand">Kickoff (Organisational meeting)</p>
-          <p class="text-slate-700 mt-1">To be held on the week of 14 Sept.</p>
-        </div>
-        <div class="rounded-2xl border p-4">
-          <p class="font-semibold text-brand">Session 1</p>
-          <p class="text-slate-700 mt-1">Coming Soon</p>
-        </div>
-        <div class="rounded-2xl border p-4">
-          <p class="font-semibold text-brand">Session 2</p>
-          <p class="text-slate-700 mt-1">Coming Soon</p>
-        </div>
+<section id="schedule" class="bg-white border-y border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 py-14">
+    <h2 class="text-2xl font-bold text-brand">Tentative Schedule</h2>
+
+    <p class="mt-2 text-slate-700">Time: <em>19:00</em>; Location: <em>Room 1167, 100 College</em></p>
+    <div class="mt-6 grid md:grid-cols-3 gap-4 text-sm">
+
+      <!-- Organisational Meeting -->
+      <!-- <div class="rounded-2xl border p-4">
+        <p class="font-semibold text-brand">Organisational Meeting</p>
+        <p class="text-slate-700 mt-1">16 Sept.</p>
+      </div> -->
+
+      <!-- 23 Sept -->
+      <div class="rounded-2xl border p-4">
+        <p class="font-semibold text-brand">23 Sept</p>
+        <p class="text-slate-700 mt-1">
+          <strong>Inference &amp; Prompt Engineering</strong> – Alex Mader<br>
+          <strong>Distributed Training</strong> (<em>Ray, JAX</em>) – George Typaldos &amp; Sasha Cui
+        </p>
       </div>
+
+      <!-- 7 Oct -->
+      <div class="rounded-2xl border p-4">
+        <p class="font-semibold text-brand">7 Oct</p>
+        <p class="text-slate-700 mt-1">
+          <strong>SFT</strong> (<em>PEFT, Lightning</em>), <strong>Tracking</strong> (<em>W&amp;B</em>), <strong>Datasets</strong> (<em>PyArrow, Hugging Face Datasets</em>) – Ananya Krishna &amp; Donglu Bai
+        </p>
+      </div>
+
+      <!-- 21 Oct -->
+      <div class="rounded-2xl border p-4">
+        <p class="font-semibold text-brand">21 Oct</p>
+        <p class="text-slate-700 mt-1">
+          <strong>Serving</strong> (<em>vLLM</em>) &amp; <strong>Distributed Training</strong> (<em>DeepSpeed</em>) – Xinyang Hu<br>
+          <strong>MCP</strong> (<em>tool use, FastAPI</em>) – Alex Mader<br>
+        </p>
+      </div>
+
+      <!-- 4 Nov -->
+      <div class="rounded-2xl border p-4">
+        <p class="font-semibold text-brand">4 Nov</p>
+        <p class="text-slate-700 mt-1">
+          <strong>Robotics</strong> (<em>OpenVLA, RoboVerse</em>) – Jeffrey Wei<br>
+          <strong>Model Evaluation &amp; Benchmarking</strong> (<em>lm-eval, inspect-ai, Terminal Bench</em>) – Chris Zhu
+        </p>
+      </div>
+
+      <!-- 18 Nov -->
+      <div class="rounded-2xl border p-4">
+        <p class="font-semibold text-brand">18 Nov</p>
+        <p class="text-slate-700 mt-1">
+          <strong>Agents</strong> (<em>LangChain, ReAct workflows</em>) – Shiv &amp; Xinyang Hu<br>
+          <strong>Interpretability</strong> (<em>nnSight, frameworks</em>) – Ananya Krishna &amp; Will Sanok Dufallo
+        </p>
+      </div>
+
+      <!-- 2 Dec -->
+      <div class="rounded-2xl border p-4">
+        <p class="font-semibold text-brand">2 Dec</p>
+        <p class="text-slate-700 mt-1">
+          <strong>RL</strong> (<em>VERL, Q-function Monte Carlo</em>), <strong>Containers</strong> (<em>Docker, Apptainer</em>) – Xingzhi Sun, Quan Le, Donglu Bai
+        </p>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+
 
   <!-- Join -->
   <section id="join" class="bg-brand text-white">
