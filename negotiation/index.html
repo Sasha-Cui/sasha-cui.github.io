@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Negotiation Bot</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    #chat { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; }
+    p { margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <h2>Negotiation Exercise</h2>
+  <div id="chat"></div>
+  <input id="msg" placeholder="Type your message"/>
+  <button onclick="send()">Send</button>
+  <button onclick="endNegotiation()">End Negotiation & Receive Feedback</button>
+
+  <script>
+    let transcript = [];
+    const student_id = "student" + Math.floor(Math.random() * 10000);
+    const BACKEND_URL = "https://negotiation-backend-ut5t.onrender.com"; 
+
+    async function send() {
+      const msg = document.getElementById("msg").value;
+      if (!msg) return;
+      transcript.push({role: "user", content: msg});
+      document.getElementById("chat").innerHTML += `<p><b>You:</b> ${msg}</p>`;
+      document.getElementById("msg").value = "";
+
+      const res = await fetch(`${BACKEND_URL}/message`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ student_id, message: msg, transcript })
+      });
+      const data = await res.json();
+      transcript = data.transcript;
+      document.getElementById("chat").innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
+      document.getElementById("chat").scrollTop = document.getElementById("chat").scrollHeight;
+    }
+
+    async function endNegotiation() {
+      const res = await fetch(`${BACKEND_URL}/feedback`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ transcript })
+      });
+      const data = await res.json();
+      document.getElementById("chat").innerHTML += `<p><b>Feedback:</b> ${data.feedback}</p>`;
+      document.getElementById("chat").scrollTop = document.getElementById("chat").scrollHeight;
+    }
+  </script>
+</body>
+</html>
