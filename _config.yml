@@ -18,6 +18,7 @@ include:
     - ".htaccess"
     - "old_index.html"
     - "full-stack.html"
+    - "ipo2018.html"
 
 exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 keep_files          : [".git", ".svn"]
